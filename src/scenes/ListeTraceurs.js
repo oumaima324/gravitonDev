@@ -1,6 +1,6 @@
 import { ListItem, Avatar, Icon } from 'react-native-elements';
 import React, { Component } from 'react';
-import { View, FlatList} from 'react-native';
+import { View, FlatList,StyleSheet} from 'react-native';
 import HeaderComponent from '../components/HeaderComponent';
 import Searchbar from '../components/Searchbar';
 
@@ -38,6 +38,7 @@ class ListeTraceurs extends Component {
     return (
       <View>
       <HeaderComponent>TRACEURS</HeaderComponent>
+      <View style = {styles.lineStyle} />
       <Searchbar></Searchbar>
       <FlatList
         keyExtractor = {(item, index) => index.toString()}
@@ -59,5 +60,12 @@ class ListeTraceurs extends Component {
   }
 
 }
+const styles = StyleSheet.create({
+  lineStyle:{
+        borderWidth: 5,
+        borderColor:'#808080',
+        margin:0,
+      },
+        });
 
 export default ListeTraceurs;

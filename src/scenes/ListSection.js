@@ -47,6 +47,7 @@ export default class ListSection extends React.Component {
     return (
       <View style={styles.container}>
        <HeaderComponent> Traceur</HeaderComponent>
+       <View style = {styles.lineStyle} />
         <SectionList
             sections={this.state.data}
             keyExtractor={(item, index) => item + index}
@@ -114,4 +115,9 @@ buttonContainer:{
 
   },
 
-});
+    lineStyle:{
+          borderWidth: 5,
+          borderColor:'#808080',
+          margin:0,
+        },
+          });

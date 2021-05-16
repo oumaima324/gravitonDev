@@ -1,6 +1,6 @@
 import { ListItem, Avatar, Icon } from 'react-native-elements';
 import React, { Component } from 'react';
-import { View, FlatList} from 'react-native';
+import { View, FlatList, StyleSheet} from 'react-native';
 import HeaderComponent from '../components/HeaderComponent';
 import Searchbar from '../components/Searchbar';
 
@@ -41,6 +41,7 @@ class Plus extends Component {
     return (
       <View>
       <HeaderComponent>Plus</HeaderComponent>
+      <View style = {styles.lineStyle} />
 
       <FlatList
         keyExtractor = {(item, index) => index.toString()}
@@ -62,5 +63,11 @@ class Plus extends Component {
   }
 
 }
-
+const styles = StyleSheet.create({
+  lineStyle:{
+        borderWidth: 5,
+        borderColor:'#808080',
+        margin:0,
+      },
+        });
 export default Plus;
