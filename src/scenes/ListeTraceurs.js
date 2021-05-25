@@ -44,13 +44,17 @@ class ListeTraceurs extends Component {
         keyExtractor = {(item, index) => index.toString()}
         data={list}
         renderItem = {({ item }) => (
-          <ListItem bottomDivider>
+          <ListItem bottomDivider onPress={() =>
+      this.props.navigation.navigate('Map')
+    }>
             <Avatar source={{uri: item.avatar_url}} />
             <ListItem.Content>
               <ListItem.Title>{`${item.name} ${item.vitesse}`}</ListItem.Title>
               <ListItem.Subtitle>{item.Heure}</ListItem.Subtitle>
             </ListItem.Content>
-            <ListItem.Chevron />
+            <ListItem.Chevron onPress={() =>
+        this.props.navigation.navigate('Historique')
+      }/>
 
           </ListItem>
         )}

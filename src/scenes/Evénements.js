@@ -8,7 +8,7 @@ class Evénements extends Component {
     return (
       <View>
 
-      <HeaderComponent >  Evénements </HeaderComponent>
+      <HeaderComponent >  Evénement</HeaderComponent>
 
       <View style = {styles.lineStyle} />
 
