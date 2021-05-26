@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {Text, StyleSheet, View } from "react-native";
 import CheckBox from '@react-native-community/checkbox';
 
-const Checkboxs = () => {
+const Checkboxs = ({style}) => {
   const [isSelected, setSelection] = useState(false);
 
   return (
@@ -13,7 +13,7 @@ const Checkboxs = () => {
         <CheckBox
           value={isSelected}
           onValueChange={setSelection}
-          style={styles.checkbox}
+          style={[styles.checkbox, style]}
         />
       </View>
 
@@ -22,22 +22,7 @@ const Checkboxs = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    color: "red",
-  },
-  checkboxContainer: {
-    flexDirection: "row",
-    marginBottom: 20,
-  },
-  checkbox: {
-    alignSelf: "center",
-  },
-  label: {
-    margin: 8,
-  },
+
 });
 
 export default Checkboxs;

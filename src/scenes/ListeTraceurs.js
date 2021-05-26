@@ -37,7 +37,7 @@ class ListeTraceurs extends Component {
   render () {
     return (
       <View>
-      <HeaderComponent>TRACEURS</HeaderComponent>
+    <HeaderComponent label='Traceurs' style={{paddingBottom: 15,paddingTop: 15, backgroundColor:'#C0C0C0'}}/>
       <View style = {styles.lineStyle} />
       <Searchbar></Searchbar>
       <FlatList
@@ -52,9 +52,7 @@ class ListeTraceurs extends Component {
               <ListItem.Title>{`${item.name} ${item.vitesse}`}</ListItem.Title>
               <ListItem.Subtitle>{item.Heure}</ListItem.Subtitle>
             </ListItem.Content>
-            <ListItem.Chevron onPress={() =>
-        this.props.navigation.navigate('Historique')
-      }/>
+            <ListItem.Chevron onPress={() => this.props.navigation.navigate('ListSection')}/>
 
           </ListItem>
         )}

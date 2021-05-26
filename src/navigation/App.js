@@ -13,7 +13,7 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Splash">
         <Stack.Screen name="Splash" component={LoadingScene} options={{headerShown: false}}  />
-        <Stack.Screen name="AuthScene" component={AuthScene} options={{headerShown: false}} />
+        <Stack.Screen name="Authentification" component={Authentification} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -29,7 +29,7 @@ class LoadingScene extends Component{
 
     }),
   ]).start(()=>{
-        setTimeout(()=>{this.props.navigation.navigate('AuthScene')}, 1500);
+        setTimeout(()=>{  this.props.navigation.navigate('AuthScene')}, 1500);
 
   });
   }
@@ -43,14 +43,12 @@ class LoadingScene extends Component{
           outputRange:[80,0],
         }),
       }}>
-      <Image source={img} />
+      <Image source={require('../images/graviton.png')} />
       </Animated.View>
 
       <Animated.View style={{
         opacity:this.state.LogoText}}>
-        <Text style={styles.logoText}>
-         Tracking Application
-        </Text>
+
       </Animated.View>
 
       </View>
@@ -62,7 +60,7 @@ class LoadingScene extends Component{
 export default LoadingScene;
 const styles = StyleSheet.create({
   container:{
-    backgroundColor: 'orange',
+  
     flex: 1,
     justifyContent: 'center',
     alignItems:'center',

@@ -15,7 +15,7 @@ class Historique extends Component {
     return (
       <View>
 
-      <HeaderComponent> Historique des traceurs  </HeaderComponent>
+      <HeaderComponent label='Historique' style={{paddingBottom: 15,paddingTop: 15, backgroundColor:'#C0C0C0'}}/>
       <View style = {styles.lineStyle} />
         <ListV>  </ListV>
       <Text style={styles.Text}> Options </Text>
