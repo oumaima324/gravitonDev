@@ -8,7 +8,7 @@ import Checkboxs from '../components/Checkboxs';
 import ButtonComponent from '../components/ButtonComponent';
 
 
-const ButtonExpandable = ()=>{
+const Vidange = ()=>{
   const [shouldShow, setshouldShow]=useState(true);
   const [shouldShoww, setshouldShoww]=useState(true);
   const [shouldShowww, setshouldShowww]=useState(true);
@@ -133,4 +133,4 @@ kiloStyle:{
 }
 });
 
-export default ButtonExpandable;
+export default Vidange;

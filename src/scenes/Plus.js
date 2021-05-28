@@ -7,21 +7,25 @@ import Searchbar from '../components/Searchbar';
 
 
 
+
 const list = [
   {
     name: 'Paramètres',
     avatar_url: 'https://img.icons8.com/windows/2x/settings--v1.png',
-    Screen:'ListeTraceurs',
+    Screen:'Parametres',
   },
   {
-    name: 'Rapport quotidien',
+    name: 'Rapport Quotidiens',
       avatar_url: 'https://img.icons8.com/dotty/2x/report-file.png',
-      Screen:'Historique',
+      Screen:'RapportQuotidiens',
 
   },
   {
     name: 'Documents',
-  avatar_url: 'https://img.icons8.com/carbon-copy/2x/new-document.png',
+    avatar_url: 'https://img.icons8.com/carbon-copy/2x/new-document.png',
+    Screen:'Service',
+
+
   },
   {
     name: 'Version PC',

@@ -11,7 +11,16 @@ import LoadingScene from '../scenes/LoadingScene';
 import AuthScene from '../scenes/AuthScene';
 import Map from '../scenes/Map';
 import Plus from '../scenes/Plus';
+import Parametres from '../scenes/Parametres';
 import Evénements from '../scenes/Evénements';
+import Service from '../scenes/Service';
+import Autres from '../scenes/Autres';
+import Vidange from '../scenes/Vidange';
+import Assurance from '../scenes/Assurance';
+
+import VisiteTechnique from '../scenes/VisiteTechnique';
+
+import RapportQuotidiens from '../scenes/RapportQuotidiens';
 import 'react-native-gesture-handler';
 import  MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -42,9 +51,18 @@ function TraceurStack(){
        <StackTrace.Screen name="ListeTraceurs" component={ListeTraceurs} options={{headerShown: false}}  />
       <StackTrace.Screen name="ListSection" component={ListSection} options={{headerShown: false}} />
       <StackTrace.Screen name="Map" component={Map} options={{headerShown: false}}  />
+      <StackTrace.Screen name="Parametres" component={Parametres} options={{headerShown: false}} />
+      <StackTrace.Screen name="Service" component={Service} options={{headerShown: false}}  />
+      <StackTrace.Screen name="RapportQuotidiens" component={RapportQuotidiens} options={{headerShown: false}}  />
+      <StackTrace.Screen name="Autres" component={Autres} options={{headerShown: false}}  />
+      <StackTrace.Screen name="Vidange" component={Vidange} options={{headerShown: false}}  />
+      <StackTrace.Screen name="VisiteTechnique" component={VisiteTechnique} options={{headerShown: false}}  />
+      <StackTrace.Screen name="Assurance" component={Assurance} options={{headerShown: false}}  />
     </StackTrace.Navigator>
   );
 }
+
+
 const Stack = createStackNavigator();
 export default function Apps() {
   return (

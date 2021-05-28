@@ -15,7 +15,9 @@ class Historique extends Component {
     return (
       <View>
 
-      <HeaderComponent label='Historique' style={{paddingBottom: 15,paddingTop: 15, backgroundColor:'#C0C0C0'}}/>
+   <HeaderComponent label='Historique' 
+    style={{paddingBottom: 15,paddingTop: 15, backgroundColor:'#C0C0C0'}}/>
+      <View style = {styles.lineStyle} />
       <View style = {styles.lineStyle} />
         <ListV>  </ListV>
       <Text style={styles.Text}> Options </Text>

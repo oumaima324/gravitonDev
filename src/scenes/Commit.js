@@ -3,12 +3,12 @@ import { View, StyleSheet } from 'react-native';
 import HeaderComponent from '../components/HeaderComponent';
 import Searchbar from '../components/Searchbar';
 
-class Evénements extends Component {
+class Commit extends Component {
   render () {
     return (
       <View>
 
-      <HeaderComponent label='Evénements' style={{paddingBottom: 15,paddingTop: 15, backgroundColor:'#C0C0C0'}}/>
+      <HeaderComponent >  Evénements </HeaderComponent>
 
       <View style = {styles.lineStyle} />
 
@@ -29,4 +29,4 @@ class Evénements extends Component {
         },
           });
 
-  export default Evénements;
+  export default Commit;
