@@ -7,19 +7,25 @@ import Searchbar from '../components/Searchbar';
 
 
 
+
 const list = [
   {
     name: 'Paramètres',
     avatar_url: 'https://img.icons8.com/windows/2x/settings--v1.png',
+    Screen:'Parametres',
   },
   {
-    name: 'Rapport quotidien',
+    name: 'Rapport Quotidiens',
       avatar_url: 'https://img.icons8.com/dotty/2x/report-file.png',
+      Screen:'RapportQuotidiens',
 
   },
   {
     name: 'Documents',
-  avatar_url: 'https://img.icons8.com/carbon-copy/2x/new-document.png',
+    avatar_url: 'https://img.icons8.com/carbon-copy/2x/new-document.png',
+    Screen:'Service',
+
+
   },
   {
     name: 'Version PC',
@@ -40,7 +46,7 @@ class Plus extends Component {
   render () {
     return (
       <View>
-      <HeaderComponent>Plus</HeaderComponent>
+      <HeaderComponent label='Plus' style={{paddingBottom: 15,paddingTop: 15, backgroundColor:'#C0C0C0'}}/>
       <View style = {styles.lineStyle} />
 
       <FlatList
@@ -51,10 +57,8 @@ class Plus extends Component {
             <Avatar source={{uri: item.avatar_url}} />
             <ListItem.Content>
               <ListItem.Title>{item.name}</ListItem.Title>
-
             </ListItem.Content>
-            <ListItem.Chevron />
-
+            <ListItem.Chevron onPress={() => this.props.navigation.navigate(item.Screen)} />
           </ListItem>
         )}
       />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, SectionList,SafeAreaView, Button } from 'react-native';
-import SectionListSidebar from 'react-native-sectionlist-sidebar';
+
 import HeaderComponent from '../components/HeaderComponent';
 import ButtonComponent from '../components/ButtonComponent';
 
@@ -46,7 +46,7 @@ export default class ListSection extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-       <HeaderComponent> Traceur</HeaderComponent>
+       <HeaderComponent label='Traceur' style={{paddingBottom: 15,paddingTop: 15, backgroundColor:'#C0C0C0'}}/>
        <View style = {styles.lineStyle} />
         <SectionList
             sections={this.state.data}

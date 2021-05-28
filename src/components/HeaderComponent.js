@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
 import { StyleSheet, View,Text} from 'react-native';
 
+const HeaderComponent= ({label,style})=>
+{
 
-class HeaderComponent extends Component {
+  return(
+    <View style={[styles.header,style]}>
 
-  render ()
-  {
+   <Text style={styles.headerText}>{label}</Text>
+   </View>
+  )
+};
 
-    return(
-         <View style={styles.header}>
-
-        <Text style={styles.headerText}>{this.props.children}</Text>
-        </View>
-    );
-  }
-}
 
 const styles= StyleSheet.create({
   header:{
-    width :'90%',
-    height :'15%',
+    
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',

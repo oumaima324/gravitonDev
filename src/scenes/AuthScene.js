@@ -1,18 +1,17 @@
 import React, {Component} from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Image} from 'react-native';
 import {Form, Item, Input, Body, Text, CheckBox, Button} from 'native-base';
-
+import Checkboxs from '../components/Checkboxs';
 class AuthScene extends Component {
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.top}></View>
-
         <View style={styles.middle}>
-          <Text style={styles.textContainer}>Welcome !!</Text>
+        <Image source={require('../images/graviton.png')} style={{alignItems:'center',
+        justifyContent:'center', marginTop:30 , marginLeft:30}} />
 
           <View style={styles.formArea}>
-            <Text style={[styles.textContainer, styles.signin]}>Sign in</Text>
             <Form style={styles.mainForm}>
               <Item style={styles.formItems}>
                 <Input placeholder="Username" style={styles.Input} />
@@ -21,9 +20,12 @@ class AuthScene extends Component {
                 <Input placeholder="Password" style={styles.Input} />
               </Item>
 
-
+              <View style={{flexDirection:'row', marginLeft:9}}>
+                <Checkboxs style={{marginTop:15}}/>
+                <Text style={{marginTop:18, fontSize:18}}>Se souvenir</Text>
+             </View>
               <View style={styles.Button}>
-                <Button block style={styles.mainBtn}>
+                <Button block style={styles.mainBtn} onPress={() => this.props.navigation.navigate('TabNavigateur')}>
                   <Text style={styles.btnText}>Submit</Text>
                 </Button>
               </View>
@@ -45,7 +47,7 @@ const styles = StyleSheet.create({
   },
   top: {
     position: 'relative',
-    backgroundColor: '#FF9C33',
+
     paddingRight: 12.7,
     paddingLeft: 12.7,
     height: 250,
@@ -65,7 +67,7 @@ const styles = StyleSheet.create({
     height: '100%',
     paddingRight: 12.7,
     paddingLeft: 12.7,
-    backgroundColor: '#FF9C33',
+
   },
   textContainer: {
     color: '#FCFDFF',
@@ -81,7 +83,7 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: '#ffffff',
     borderRadius: 5,
-    top: '20%',
+    top: '10%',
     paddingBottom: 40,
   },
   signin: {
@@ -120,7 +122,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   mainBtn: {
-    backgroundColor: '#70E3D1',
+    backgroundColor: '#A71F3C',
   },
   btnText: {
     color: '#2D3057',
