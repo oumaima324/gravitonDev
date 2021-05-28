@@ -14,4 +14,4 @@ import ListeTraceurs from './src/scenes/ListeTraceurs';
 
 import Service from './src/scenes/Service';
 
-AppRegistry.registerComponent('TrackingApp', () =>Apps);
+AppRegistry.registerComponent('TrackingApp', () =>ExpandableComponent);
