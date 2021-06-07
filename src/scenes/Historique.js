@@ -15,15 +15,15 @@ class Historique extends Component {
     return (
       <View>
 
-   <HeaderComponent label='Historique' 
+   <HeaderComponent label='Historique'
     style={{paddingBottom: 15,paddingTop: 15, backgroundColor:'#C0C0C0'}}/>
       <View style = {styles.lineStyle} />
       <View style = {styles.lineStyle} />
-        <ListV>  </ListV>
+      <ListV>  </ListV>
       <Text style={styles.Text}> Options </Text>
-        <ListOptions>  </ListOptions>
-        <SafeAreaView style={{flexDirection:'row',alignItems:'center',}}>
-        <View style={styles.buttonContainer}>
+      <ListOptions>  </ListOptions>
+      <SafeAreaView style={{flexDirection:'row',alignItems:'center',}}>
+      <View style={styles.buttonContainer}>
             <ButtonComponent
               label={'Afficher'}
               style={{

@@ -3,37 +3,18 @@ import React, { Component } from 'react';
 import { View, FlatList,StyleSheet} from 'react-native';
 import HeaderComponent from '../components/HeaderComponent';
 import Searchbar from '../components/Searchbar';
+import {markers} from '../Data/traceur';
 
 
 
 
-const list = [
-  {
-    name: 'Clio',
-    avatar_url: 'https://cdn.icon-icons.com/icons2/577/PNG/128/ExecutiveCar_Black_icon-icons.com_54904.png',
-    vitesse:'(5 Kms)',
-     Heure: 'il ya environ 2 heurs',
-  },
-  {
-    name: 'Dacia Docker',
-    avatar_url: 'https://cdn.icon-icons.com/icons2/577/PNG/128/Cabriolet_Red_icon-icons.com_54906.png',
-    vitesse:'(10 Kms)',
-     Heure: 'il ya environ 2 heurs',
-  },
-  {
-    name: 'JUMPY',
-    avatar_url: 'https://cdn.icon-icons.com/icons2/577/PNG/128/Cabriolet_Red_icon-icons.com_54906.png',
-    vitesse:'(10 Kms)',
-     Heure: 'il ya environ 2 heurs',
-  },
 
-]
 
 class ListeTraceurs extends Component {
-
-
-
-
+  constructor(props) {
+      super(props);
+      this.state={markers:[]};
+    }
   render () {
     return (
       <View>
@@ -41,11 +22,18 @@ class ListeTraceurs extends Component {
       <View style = {styles.lineStyle} />
       <Searchbar></Searchbar>
       <FlatList
-        keyExtractor = {(item, index) => index.toString()}
-        data={list}
+          keyExtractor={item => item.id}
+        data={markers}
         renderItem = {({ item }) => (
           <ListItem bottomDivider onPress={() =>
-      this.props.navigation.navigate('Map')
+      this.props.navigation.navigate('Map', {
+        latitude :  item.latitude,
+         longitude :  item.longitude,
+         avatar_url: item.avatar_url,
+         vitesse: item.vitesse,
+         id:item.id,
+
+              })
     }>
             <Avatar source={{uri: item.avatar_url}} />
             <ListItem.Content>
