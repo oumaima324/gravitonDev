@@ -9,4 +9,4 @@ import Maps from './src/scenes/Maps';
 
 
 
-AppRegistry.registerComponent('TrackingApp', () =>Maps);
+AppRegistry.registerComponent('TrackingApp', () =>Apps);

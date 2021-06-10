@@ -1,4 +1,4 @@
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { Marker, Callout } from 'react-native-maps';
 import { markers } from '../Data/traceur';
 import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
@@ -18,6 +18,7 @@ class Map extends Component {
           longitude:this.props.route.params.longitude,
           avatar_url:this.props.route.params.avatar_url,
           id:this.props.route.params.id,
+          vitesse:this.props.route.params.vitesse,
         }]:this.state.markers;
 
          return (
@@ -32,11 +33,21 @@ class Map extends Component {
       }}
     >
        { coordinate.map((marker) => (
-                    <Marker
-                    key={marker.id}
+                  <Marker
+                  key={marker.id}
                    coordinate={{latitude:marker.latitude, longitude:marker.longitude}}
                    image={{uri:marker.avatar_url}}
-                   />
+                   >
+                     <Callout Tooltip>
+                         <View>
+                               <View>
+                                 <Text>latitude: {marker.latitude}</Text>
+                                 <Text>Longitude:  {marker.longitude}</Text>
+                               <Text>Vitesse:  {marker.vitesse}</Text>
+                               </View>
+                         </View>
+                     </Callout>
+                   </Marker>
                          ))}
 
 
